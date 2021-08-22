@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@media screen and (max-width: 768px) {
+    section .big{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    section .small1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    section .small2{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    section .small3{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    section .small4{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+}
+
+body{
+    background-image: url("https://raw.githubusercontent.com/tel-ran-de/web_20E/lesson-25-js-functions/HW/mounting/bg-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #2d356c;
+    background-blend-mode: overlay;
+    font-size: 1.2rem;
+    font-family: Roboto, sans-serif;
+    padding: 5% 10% 5% 10%
+}
+
+h6{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 20% 0 0 0;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 3% 0 0 0;
+}
+
+main{
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+.small p{
+    font-style: italic;
+}
+
+.small{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+}
+
+.big{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 10%;
+    color: white;
+    background-color: rgba(31, 36, 102, 0.45);
+}
+
+.big h3{
+    color: #FFE102;
+}
+
+.big p{
+    font-weight: 300;
+}
+
+.arrow{
+    font-size: 5rem;
+}
+
+.small1{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.small2{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.small3{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.small4{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.icon{
+    background-color: #FFE102;
+    border: 1px #FFE102 solid;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
