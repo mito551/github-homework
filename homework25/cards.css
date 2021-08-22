@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 1.2rem;
+}
+
+.backgroundBox {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 400px;
+    color: white;
+}
+
+section {
+    padding: 3%;
+    margin-top: 40%;
+    font-weight: 200;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+h1 {
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.card1 {
+    background-color: #555c66;
+}
+
+.card1 .arrow{
+    color: #555c66;
+}
+
+.card2 {
+    background-color: #858e99;
+}
+
+.card2 .arrow{
+    color: #858e99;
+}
+
+.card3 {
+    background-color: #478ac9;
+}
+
+.card3 .arrow{
+    color: #478ac9;
+}
+
+.card4 {
+    background-color: #77aad9;
+}
+
+.card4 .arrow{
+    color: #77aad9;
+}
+
+span.arrow {
+
+    background-color: white;
+    width: 5rem;
+    height: 5rem;
+    border: white 1px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+}

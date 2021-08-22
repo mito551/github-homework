@@ -1,0 +1,91 @@
+@import "desktop.css" screen and (min-width: 1280px);
+
+:root{
+    --border-radius: 10px;
+    --margin: 5px;
+    --border: #b0ff51 solid 1px;
+}
+
+
+img{
+    width: 39vw;
+    border: 2px dotted #8a2bdc;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.right{
+    float: right;
+    clear: right;
+
+}
+
+.left{
+    float: left;
+    clear: left;
+}
+
+section{
+    font-size: 2.5vw;
+    padding: 10px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: #fcb3c1;
+    width: 100%;
+    margin: var(--margin);
+    box-sizing: border-box;
+}
+
+p{
+    padding: 5px;
+}
+
+aside{
+    border: var(--border);
+    background-color: #d7bed7;
+    padding: 20px;
+    width: 48%;
+    height: 50vh;
+    border-radius: var(--border-radius);
+    margin: var(--margin);
+    font-size: 3.5vw;
+    box-sizing: border-box;
+}
+
+aside.menu{
+    float: left;
+}
+
+aside.further-reading{
+    float: right;
+    text-align: right;
+    list-style-position: inside;
+}
+
+footer{
+    float: left;
+}
+
+/*
+
+aside{
+
+    height: 40vh;
+    font-size: 2.8vh;
+}
+
+section{
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: #fcb3c1;
+    width: 69%;
+    padding: 30px;
+    padding-top: 10px;
+    float: left;
+    margin: 5px;
+    height: 85vh;
+    font-size: 2.8vh;
+}
+

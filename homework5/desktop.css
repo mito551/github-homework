@@ -1,0 +1,48 @@
+@media screen and (min-width: 1280px) {
+    aside.right {
+        float: right;
+        clear: right;
+
+    }
+
+    aside.left {
+        float: left;
+        clear: left;
+    }
+
+    img.img{
+        width: 30%;
+        border: 2px dotted #8a2bdc;
+        border-radius: 10px;
+        margin: 7px;
+        padding: 5px;
+    }
+
+    section.main {
+        font-size: 1.5vw;
+        padding: 10px;
+        width: 79%;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    #desktop {
+        padding: 20px;
+        width: 19%;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+        height: 30vw;
+        float: right;
+        text-align: left;
+        list-style-position: outside;
+    }
+
+    aside.menu{
+        float: right !important;
+    }
+
+    footer.footer{
+        float:left;
+
+    }
+}
