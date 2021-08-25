@@ -1,40 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
-@media screen and (max-width: 768px) {
-    section .big{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
-
-    section .small1{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 3;
-    }
-
-    section .small2{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 3;
-    }
-
-    section .small3{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 4;
-    }
-
-    section .small4{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
-    }
-}
 
 body{
     background-image: url("https://raw.githubusercontent.com/tel-ran-de/web_20E/lesson-25-js-functions/HW/mounting/bg-image.png");
@@ -140,3 +104,39 @@ main{
     justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+    .big{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .small1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .small2{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .small3{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .small4{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+}
