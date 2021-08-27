@@ -1,0 +1,21 @@
+.dataContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0 20%;
+    margin: 2%;
+    padding: 2%;
+    color: white;
+    background-color: #6278e2;
+    border: 1px solid #6278e2;
+    border-radius: 5px;
+    background-blend-mode: screen;
+}
