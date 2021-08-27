@@ -1,3 +1,8 @@
+body{
+    background-color: #121636;
+    color: white;
+}
+
 .dataContainer{
     display: flex;
     align-items: center;

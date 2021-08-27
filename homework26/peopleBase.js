@@ -38,7 +38,7 @@ btn.addEventListener('click', (event) => {
     const newCountry = countryInput.value;
     const newPizza = pizzaInput.checked;
     if (newName === "") return;
-    // if (newBirthday == NaN) return;
+    if (birthdayInput.value === "") return;
     const newPerson = {
         id: ++lastId,
         name: newName,
@@ -47,7 +47,7 @@ btn.addEventListener('click', (event) => {
         isPsychopath: newPizza
     };
     peopleList.push(newPerson);
-    console.log(peopleList)
+    // console.log(peopleList)
     renderTodo();
     nameInput.value = "";
 })

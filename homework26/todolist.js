@@ -10,7 +10,11 @@ const renderTodo = () => {
     list.innerHTML = "";
     todoList.forEach((todo) =>{
         const listElement = document.createElement('li');
+        listElement.id = `id_${todo.id}`
         listElement.innerText = todo.title;
+        if (todo.isCompleted){
+            listElement.classList.add('text-decoration-line-through')
+        }
         list.appendChild(listElement);
     })
 }
@@ -30,9 +34,11 @@ btn.addEventListener('click', (event) => {
 })
 
 list.addEventListener('click', event => {
-    const completion = todoList.find(param => param.title === event.target.textContent)
+    const id = +event.target.id.split("_")[1]
+    const completion = todoList.find(param => param.id === id)
     completion.isCompleted = !completion.isCompleted;
-    event.target.classList.toggle(`text-decoration-line-through`)
+    renderTodo();
+    // event.target.classList.toggle(`text-decoration-line-through`)
 })
 
 //text-decoration-line-through
