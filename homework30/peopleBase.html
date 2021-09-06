@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="peopleBase.css" class="css">
+</head>
+<body>
+  <div class="container">
+    <div class="mt-5">
+      <div class="mb-3 row">
+        <label for="formName" class="col-sm-2 col-form-label">Name:</label>
+        <div class="mb-3 col-sm-10">
+          <input type="text" class="form-control" id="formName">
+        </div>
+        <label for="formBirth" class="col-sm-2 col-form-label">Birthday:</label>
+        <div class="mb-3 col-sm-10">
+          <input type="date" class="form-control" id="formBirth">
+        </div>
+        <label for="formCountry" class="col-sm-2 col-form-label">Country of residence:</label>
+        <div class="mb-3 col-sm-10">
+          <select name="countries" class="form-control" id="formCountry">
+            <option value="Germany">Germany</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <label for="formPizza" class="col-sm-2 col-form-label">Check if you like pineapple on pizza:</label>
+        <div class="mb-3 col-sm-10">
+          <input type="checkbox" class="" id="formPizza">
+        </div>
+        <div class="col-sm-12 mt-3">
+          <button class="btn btn-sm btn-success col-sm-1" type="button" id="submitForm">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="dataContainer" id="app">
+  </main>
+<script src="peopleBase.js"></script>
+</body>
+</html>
