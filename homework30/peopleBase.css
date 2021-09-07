@@ -53,14 +53,14 @@ body{
 }
 
 .deleteButton{
-    left: 20px;
+    left: 10px;
     bottom: 10px;
     background-color: orangered;
     color: darkred;
 }
 
 .editButton{
-    left: -5px;
+    left: -15px;
     bottom: 30px;
     background-color: #a1cd2c;
     color: #516816;
@@ -69,7 +69,7 @@ body{
 .confirmButton{
     /*left: 20px;*/
     /*top: 130px;*/
-    left: -5px;
+    left: -15px;
     bottom: 30px;
     background-color: #53b2f5;
     color: #194d74;

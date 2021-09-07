@@ -10,7 +10,7 @@ class Person {
     constructor(nextID, newName, newAge, newCountry, newPizza) {
         this.id = nextID;
         this.name = newName;
-        this.age = newAge
+        this.age = newAge;
         this.country = newCountry;
         this.isPsychopath = newPizza;
         this.isDeleted = false;
@@ -20,7 +20,7 @@ class Person {
 const peopleList = [{
     id: 0,
     name: "Test Subject",
-    age: 29,
+    age: new Date("1995-11-29"),
     country: "Germany",
     isPsychopath: "Personality: Normal Person",
     isDeleted: false
@@ -45,6 +45,7 @@ function renderForm(container, person, editingObject){
     personAgeLabel.innerText = "New Birthday:";
     const personAge = document.createElement('input');
     personAge.setAttribute("type", "date")
+    personAge.setAttribute("value", person.age)
 
     const personCountryLabel = document.createElement('label');
     personCountryLabel.innerText = "New Country:";
@@ -92,7 +93,6 @@ const editButtonActivate = (editBtn, personContainer, container, person) => {
         const editingObject = peopleList.find(param => param.id === id)
         personContainer.classList.add('deleted')
         editBtn.classList.add('deleted')
-
         renderForm(container, person, editingObject)
     })
 }
@@ -100,14 +100,14 @@ const editButtonActivate = (editBtn, personContainer, container, person) => {
 const confirmButtonActivate = (confirmBtn, editingContainer, editingObject, personName, personAge, personCountry, personPizza) => {
     confirmBtn.addEventListener('click', event => {
         const newName = personName.value.trim();
-        const newBirthday = new Date(personAge.value);
+        const newBirthday = personAge.value;
         const newCountry = personCountry.value;
         const newPizza = personPizza.checked;
         if (newName === "") return;
-        if (newBirthday.value === "") return;
+        if (personAge.value === "") return;
         editingContainer.classList.remove('deleted')
         editingObject.name = newName
-        editingObject.age = 2021 - newBirthday.getUTCFullYear()
+        editingObject.age = newBirthday
         editingObject.country = newCountry
         editingObject.isPsychopath = newPizza
         renderTodo();
@@ -117,6 +117,8 @@ const confirmButtonActivate = (confirmBtn, editingContainer, editingObject, pers
 const renderTodo = () => {
     list.innerHTML = "";
     peopleList.forEach((person) => {
+        const birthday = new Date(person.age)
+        const newAge = 2021 - birthday.getUTCFullYear()
 
         const container = document.createElement('div');
         container.classList.add('wrapItUp')
@@ -125,7 +127,7 @@ const renderTodo = () => {
         const personName = document.createElement('span');
         personName.innerText = "Name: " + person.name;
         const personAge = document.createElement('span');
-        personAge.innerText = "Age: " + person.age;
+        personAge.innerText = "Age: " + newAge;
         const personCountry = document.createElement('span');
         personCountry.innerText = "Living in: " + person.country;
         const personPizza = document.createElement('span');
@@ -163,14 +165,14 @@ renderTodo();
 btn.addEventListener('click', (event) => {
     event.preventDefault();
     const newName = nameInput.value.trim();
-    const newBirthday = new Date(birthdayInput.value);
+    const newBirthday = birthdayInput.value;
     const newCountry = countryInput.value;
     const newPizza = pizzaInput.checked;
     if (newName === "") return;
     if (birthdayInput.value === "") return;
-    const newPerson = new Person (++lastId, newName, 2021 - newBirthday.getUTCFullYear(), newCountry, newPizza)
+    const newPerson = new Person (++lastId, newName, newBirthday, newCountry, newPizza)
     peopleList.push(newPerson);
-    // console.log(peopleList)
+    console.log(newBirthday)
     renderTodo();
     nameInput.value = "";
 })
