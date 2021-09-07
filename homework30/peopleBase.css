@@ -3,8 +3,8 @@ body{
     color: white;
 }
 
-div.deleted{
-    display: none; !important;
+.deleted{
+    display: none !important;
 }
 
 .dataContainer{
@@ -36,9 +36,10 @@ div.deleted{
     justify-content: center;
     flex-direction: column;
     flex: 0 0 30%;
+    bottom: -30px;
 }
 
-.deleteButton, .editButton{
+.deleteButton, .editButton, .confirmButton{
     position: relative;
     place-self: flex-end;
     width: 20px;
@@ -65,6 +66,15 @@ div.deleted{
     color: #516816;
 }
 
+.confirmButton{
+    /*left: 20px;*/
+    /*top: 130px;*/
+    left: -5px;
+    bottom: 30px;
+    background-color: #53b2f5;
+    color: #194d74;
+}
+
 .wrapItUp{
     display: flex;
     flex-direction: column;
@@ -79,6 +89,11 @@ div.deleted{
 }
 
 span{
+    margin-bottom: 25px;
+    margin-top: -20px;
+}
+
+.wrapItUp input, .wrapItUp label, .wrapItUp select{
     margin-bottom: 25px;
     margin-top: -20px;
 }
