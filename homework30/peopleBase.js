@@ -83,6 +83,7 @@ const deleteButtonActivate = (deleteBtn) => {
         const id = +event.target.id.split("_")[1]
         const deletion = peopleList.find(param => param.id === id)
         deletion.isDeleted = true;
+        console.log("is it deleted?", deletion.isDeleted)
         renderTodo();
     })
 }
@@ -98,7 +99,7 @@ const editButtonActivate = (editBtn, personContainer, container, person) => {
 }
 
 const confirmButtonActivate = (confirmBtn, editingContainer, editingObject, personName, personAge, personCountry, personPizza) => {
-    confirmBtn.addEventListener('click', event => {
+    confirmBtn.addEventListener('click', () => {
         const newName = personName.value.trim();
         const newBirthday = personAge.value;
         const newCountry = personCountry.value;
@@ -117,6 +118,8 @@ const confirmButtonActivate = (confirmBtn, editingContainer, editingObject, pers
 const renderTodo = () => {
     list.innerHTML = "";
     peopleList.forEach((person) => {
+        if (person.isDeleted) return;
+
         const birthday = new Date(person.age)
         const newAge = 2021 - birthday.getUTCFullYear()
 
@@ -140,10 +143,6 @@ const renderTodo = () => {
         editButton.classList.add('editButton');
         editButton.innerText = "E"
         editButton.id = `id_${person.id}`
-
-        if (person.isDeleted) {
-            container.classList.add('deleted')
-        }
 
         container.appendChild(deleteButton);
         container.appendChild(editButton);
