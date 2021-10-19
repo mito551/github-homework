@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.sun, .moon{
+  position: fixed;
+  top: 50px;
+  transition: opacity 500ms;
+  font-size: 5rem;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0 0 5px rgba(0,0,0,0.65);
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+.sun{
+  left: 70px;
+}
+
+.moon{
+  right: 70px;
+}
+
+.sunStyle, .moonStyle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  transition: background-color 1s;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.sunStyle_button, .moonStyle_button{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 500ms, box-shadow 500ms;
+  box-shadow: 0 0 15px 5px rgba(0,0,0,0.75);
+}
+
+.moonStyle_button:hover{
+  background-color: #b1bbe5;
+  box-shadow: 0 0 25px 5px rgba(0,0,0,0.75);
+}
+
+.moonStyle_button:active{
+  background-color: #22242c;
+}
+
+.sunStyle_button:hover{
+  background-color: #ffd749;
+  box-shadow: 0 0 25px 5px rgba(0,0,0,0.75);
+}
+
+.sunStyle_button:active{
+  background-color: #2f2610;
+}
+
+.sunStyle{
+  /*background: radial-gradient(circle farthest-corner at center center, #aed9e7 0%, #8facbb 80%);*/
+  background-color: #aed9e7;
+  animation-name: slight-glow-sun;
+}
+
+.sunStyle_button{
+  background-color: #ffcc03;
+}
+
+.moonStyle{
+  /*background: radial-gradient(circle farthest-corner at center center, #2e47b8 0%, #5872e7 80%);*/
+  background-color: #2e47b8;
+  animation-name: slight-glow-moon;
+}
+
+.moonStyle_button{
+  background-color: #8c98c9;
+}
+
+@keyframes fade-in{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slight-glow-sun {
+  0%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 4%);}
+  2%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 5%);}
+  4%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 6%);}
+  6%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 7%);}
+  8%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 8%);}
+  10%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 9%);}
+  12%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 10%);}
+  14%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 11%);}
+  16%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 12%);}
+  18%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 13%);}
+  20%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 14%);}
+  22%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 15%);}
+  24%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 16%);}
+  26%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 17%);}
+  28%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 18%);}
+  30%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 19%);}
+  32%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 20%);}
+  34%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 21%);}
+  36%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 22%);}
+  38%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 23%);}
+  40%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 24%);}
+  42%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 25%);}
+  44%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 26%);}
+  46%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 27%);}
+  48%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 28%);}
+  50%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 29%);}
+  52%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 28%);}
+  54%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 27%);}
+  56%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 26%);}
+  58%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 25%);}
+  60%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 24%);}
+  62%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 23%);}
+  64%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 22%);}
+  66%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 21%);}
+  68%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 20%);}
+  70%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 19%);}
+  72%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 18%);}
+  74%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 17%);}
+  76%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 16%);}
+  78%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 15%);}
+  80%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 14%);}
+  82%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 13%);}
+  84%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 12%);}
+  86%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 11%);}
+  88%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 10%);}
+  90%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 9%);}
+  92%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 8%);}
+  94%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 7%);}
+  96%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 6%);}
+  98%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 5%);}
+  100%{background: radial-gradient(circle farthest-corner at center center,  #8facbb 0%, #aed9e7 4%);}
+
+}
+
+@keyframes slight-glow-moon {
+
+  0%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 4%);}
+  2%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 5%);}
+  4%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 6%);}
+  6%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 7%);}
+  8%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 8%);}
+  10%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 9%);}
+  12%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 10%);}
+  14%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 11%);}
+  16%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 12%);}
+  18%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 13%);}
+  20%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 14%);}
+  22%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 15%);}
+  24%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 16%);}
+  26%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 17%);}
+  28%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 18%);}
+  30%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 19%);}
+  32%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 20%);}
+  34%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 21%);}
+  36%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 22%);}
+  38%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 23%);}
+  40%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 24%);}
+  42%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 25%);}
+  44%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 26%);}
+  46%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 27%);}
+  48%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 28%);}
+  50%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 29%);}
+  52%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 28%);}
+  54%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 27%);}
+  56%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 26%);}
+  58%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 25%);}
+  60%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 24%);}
+  62%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 23%);}
+  64%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 22%);}
+  66%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 21%);}
+  68%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 20%);}
+  70%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 19%);}
+  72%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 18%);}
+  74%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 17%);}
+  76%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 16%);}
+  78%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 15%);}
+  80%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 14%);}
+  82%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 13%);}
+  84%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 12%);}
+  86%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 11%);}
+  88%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 10%);}
+  90%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 9%);}
+  92%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 8%);}
+  94%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 7%);}
+  96%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 6%);}
+  98%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 5%);}
+  100%{background: radial-gradient(circle farthest-corner at center center,  #5872e7 0%, #2e47b8 4%);}
+}
+
+/*from {*/
+/*  background: radial-gradient(circle farthest-corner at center center, #aed9e7 0%, #8facbb 80%);*/
+/*}*/
+/*to {*/
+/*  background: radial-gradient(circle farthest-corner at center center, #8facbb 0%, #aed9e7 80%);*/
+/*}*/

@@ -13,8 +13,9 @@ class Person {
         this.age = newAge;
         this.country = newCountry;
         this.isPsychopath = newPizza;
-        this.isDeleted = false;
     }
+
+    //getAge() - create a function to calculate age
 }
 
 const peopleList = [{
@@ -83,7 +84,6 @@ const deleteButtonActivate = (deleteBtn) => {
         const id = +event.target.id.split("_")[1]
         const deletion = peopleList.find(param => param.id === id)
         deletion.isDeleted = true;
-        console.log("is it deleted?", deletion.isDeleted)
         renderTodo();
     })
 }
@@ -115,11 +115,13 @@ const confirmButtonActivate = (confirmBtn, editingContainer, editingObject, pers
     })
 }
 
+//considering using classes instead
+
 const renderTodo = () => {
     list.innerHTML = "";
     peopleList.forEach((person) => {
         if (person.isDeleted) return;
-
+        // move this to person class
         const birthday = new Date(person.age)
         const newAge = 2021 - birthday.getUTCFullYear()
 
@@ -171,7 +173,7 @@ btn.addEventListener('click', (event) => {
     if (birthdayInput.value === "") return;
     const newPerson = new Person (++lastId, newName, newBirthday, newCountry, newPizza)
     peopleList.push(newPerson);
-    console.log(newBirthday)
+    // console.log(newBirthday)
     renderTodo();
     nameInput.value = "";
 })
