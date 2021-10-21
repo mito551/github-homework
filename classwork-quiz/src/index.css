@@ -1,13 +1,109 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Ubuntu:wght@300;400;700&display=swap');
+
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navContainer{
+  background-color: #2d356c;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10vh;
+}
+
+.navItem{
+  background-color: #525dd0;
+  margin: 20px 10vh 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: all 500ms;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
+  width: 20vh;
+  text-align: center;
+}
+
+.navItem:hover{
+  background-color: #606df5;
+}
+
+.homeContainer{
+  background-color: #4b56a4;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  text-decoration: none;
+  padding-left: 10vh;
+}
+
+.homeTitle{
+  font-family: 'Rampart One', cursive;
+}
+
+.home-quizContainer{
+  border: white solid 2px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 300px;
+  display: flex;
+  background-color: #2e3577;
+}
+
+.home-quizName{
+  flex-grow: 1;
+  margin: 10px;
+}
+
+.home-quizLink{
+  border-left: white solid 2px;
+  padding: 10px 15px 10px 10px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.home-quizLink:hover{
+  background: white;
+  color: black;
+}
+
+.questionContainer{
+  background-color: #4b56a4;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  text-decoration: none;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.questionTitle{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.answerTitle{
+  border: white solid 2px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 300px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #2e3577;
+}
+
+.answerTitle:hover{
+  background-color: white;
+  color: black;
 }

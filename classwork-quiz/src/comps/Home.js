@@ -8,15 +8,15 @@ const Home = () => {
 
     const renderQuizzes = () => {
         return quizzes.map(q =>
-            (<div key={q.id}>
-                {q.title}
-                <Link to={`/quiz/${q.id}`}>▶</Link>
+            (<div className="home-quizContainer" key={q.id}>
+                <span className="home-quizName">{q.title}</span>
+                <Link className="home-quizLink" to={`/quiz/${q.id}`}>▶</Link>
             </div>))
     }
 
     return (
-        <div>
-            <h1>Select your quiz</h1>
+        <div className="homeContainer">
+            <h1 className="homeTitle">Select your quiz</h1>
             {renderQuizzes()}
         </div>
     )

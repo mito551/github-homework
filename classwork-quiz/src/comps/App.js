@@ -9,7 +9,7 @@ import {Switch, Route} from "react-router-dom";
 const App = () => {
 
     return (
-        <div style={{margin: "2%"}}>
+        <div>
             <NavBar />
             <Switch>
                 <Route path="/" exact={true}>
@@ -21,7 +21,7 @@ const App = () => {
                 <Route path="/quiz/:quizID">
                     <Quiz />
                 </Route>
-                <Route path="/leaderboards">
+                <Route path="/leaderboard">
                     <Leaderboards />
                 </Route>
             </Switch>

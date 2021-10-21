@@ -1,4 +1,5 @@
 const initState = {
+    scoreTable: [],
     quizzes: [
         {
             id: 1,
@@ -82,12 +83,17 @@ const initState = {
 }
 
 export const reducer = (state = initState, action) => {
+    switch (action.type) {
+        case 'SEND_SCORE':
+            return {...state, scoreTable: [...state.scoreTable, action.payload]}
 
-    return state
-}
-
-const action = (value) => {
-    return {
-
+        default:
+            return state
     }
 }
+
+// const action = (value) => {
+//     return {
+//
+//     }
+// }
